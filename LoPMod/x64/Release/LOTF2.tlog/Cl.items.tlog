@@ -1,0 +1,12 @@
+D:\gollum modding\LoPMod - Copy\LoPMod\dllmain.cpp;D:\gollum modding\LoPMod - Copy\LoPMod\x64\Release\dllmain.obj
+D:\gollum modding\LoPMod - Copy\LoPMod\pch.cpp;D:\gollum modding\LoPMod - Copy\LoPMod\x64\Release\pch.obj
+D:\gollum modding\LoPMod - Copy\LoPMod\SDK\AnathemaPlayerCharacter_BP_functions.cpp;D:\gollum modding\LoPMod - Copy\LoPMod\x64\Release\AnathemaPlayerCharacter_BP_functions.obj
+D:\gollum modding\LoPMod - Copy\LoPMod\SDK\BaseAICharacter_BP_functions.cpp;D:\gollum modding\LoPMod - Copy\LoPMod\x64\Release\BaseAICharacter_BP_functions.obj
+D:\gollum modding\LoPMod - Copy\LoPMod\SDK\Basic.cpp;D:\gollum modding\LoPMod - Copy\LoPMod\x64\Release\Basic.obj
+D:\gollum modding\LoPMod - Copy\LoPMod\SDK\BP_Collider_LanternSoulsucking_PassiveSmall_functions.cpp;D:\gollum modding\LoPMod - Copy\LoPMod\x64\Release\BP_Collider_LanternSoulsucking_PassiveSmall_functions.obj
+D:\gollum modding\LoPMod - Copy\LoPMod\SDK\BP_Collider_LanternSyphoning_functions.cpp;D:\gollum modding\LoPMod - Copy\LoPMod\x64\Release\BP_Collider_LanternSyphoning_functions.obj
+D:\gollum modding\LoPMod - Copy\LoPMod\SDK\CoreUObject_functions.cpp;D:\gollum modding\LoPMod - Copy\LoPMod\x64\Release\CoreUObject_functions.obj
+D:\gollum modding\LoPMod - Copy\LoPMod\SDK\DeveloperSettings_functions.cpp;D:\gollum modding\LoPMod - Copy\LoPMod\x64\Release\DeveloperSettings_functions.obj
+D:\gollum modding\LoPMod - Copy\LoPMod\SDK\Engine_functions.cpp;D:\gollum modding\LoPMod - Copy\LoPMod\x64\Release\Engine_functions.obj
+D:\gollum modding\LoPMod - Copy\LoPMod\SDK\LOTF2_functions.cpp;D:\gollum modding\LoPMod - Copy\LoPMod\x64\Release\LOTF2_functions.obj
+D:\gollum modding\LoPMod - Copy\LoPMod\VMTHook.cpp;D:\gollum modding\LoPMod - Copy\LoPMod\x64\Release\VMTHook.obj
