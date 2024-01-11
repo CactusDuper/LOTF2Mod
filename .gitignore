@@ -30,4 +30,15 @@
 *.exe
 *.out
 *.app
+*.pdb
 /.vs
+/LOTF2Mod/x64/*
+
+# SDK related files
+/LOTF2Mod/SDK/*
+/LOTF2Mod/SDK.hpp
+/LOTF2Mod/PropertyFixup.hpp
+/LOTF2Mod/MemoryHacking.h
+/LOTF2Mod/bakSDK.hpp
+
+/packages/*
