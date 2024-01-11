@@ -330,8 +330,8 @@ void OnAttach() {
         globals::mainWindow = (HWND)FindWindow(0, "Lords of the Fallen  ");
     }
 
-    //hooks::Init();
-    //cout << "Got mainWindow" << endl;
+    hooks::Init();
+    cout << "Got mainWindow" << endl;
     //isReady = true;
 }
 

@@ -190,7 +190,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\largest report\Universal-Dear-ImGui-Hook-master\Universal-Dear-ImGui-Hook-master\Universal-ImGui-Hook.vcxproj">
+    <ProjectReference Include="..\Universal-Dear-ImGui-Hook-master\Universal-ImGui-Hook.vcxproj">
       <Project>{1c015f7c-647e-46e3-855e-614b434116a6}</Project>
     </ProjectReference>
   </ItemGroup>
