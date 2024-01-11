@@ -288,25 +288,44 @@ void OnAttach() {
     //GWorld = reinterpret_cast<UWorld**>(uintptr_t(GetModuleHandle(0)) + Offsets::GWorld);
     //LPVOID** ProcessEvent = reinterpret_cast<LPVOID**>(reinterpret_cast<uintptr_t>(GetModuleHandle(0)) + Offsets::ProcessEvent);
 
+    /*
+    namespace Offsets
+    {
+	    constexpr int32 GObjects          = 0x086D82E0;
+	    constexpr int32 AppendString      = 0x02CB1B00;
+	    constexpr int32 GNames            = 0x00000000;
+	    constexpr int32 ProcessEvent      = 0x02E4D620;
+	    constexpr int32 ProcessEventIdx   = 0x0000004C;
+	    constexpr int32 CreateDefaultObjectIdx = 0x0000007C;
+	    //constexpr int32 GEngine					= 0x0882F610;
+	    constexpr int32 ViewportPostRenderIdx = 0x0000006D;
+	    constexpr int32 HUDPostRenderIdx = 0x000000ED;
+
+    }
+    */
+
     LPVOID** ProcessEvent = reinterpret_cast<LPVOID**>(reinterpret_cast<uintptr_t>(Vft[Offsets::ProcessEventIdx]));
 
     cout << "ProcessEvent: 0x" << ProcessEvent << endl;
 
-    //GEngine = reinterpret_cast<UGameEngine**>(uintptr_t(GetModuleHandle(0)) + Offsets::GEngine);
+    MH_CreateHook(reinterpret_cast<LPVOID>(ProcessEvent), reinterpret_cast<void*>(HkProcessEvent), reinterpret_cast<PVOID*>(&OProcessEvent));
+    MH_EnableHook(reinterpret_cast<LPVOID>(ProcessEvent));
 
     //GEngine = reinterpret_cast<UGameEngine**>(uintptr_t(GetModuleHandle(0)) + Offsets::GEngine);
-    auto gameBase = (uint64_t)GetModuleHandle(0);
+
+    //GEngine = reinterpret_cast<UGameEngine**>(uintptr_t(GetModuleHandle(0)) + Offsets::GEngine);
+    //auto gameBase = (uint64_t)GetModuleHandle(0);
 
 
-    UDeveloperMenuSubsystem* DMS = UObject::FindObject<UDeveloperMenuSubsystem>("DeveloperMenuSubsystem LOTF2.Default__DeveloperMenuSubsystem");
+    //UDeveloperMenuSubsystem* DMS = UObject::FindObject<UDeveloperMenuSubsystem>("DeveloperMenuSubsystem LOTF2.Default__DeveloperMenuSubsystem");
 
-    LPVOID** ShouldCreateDeveloperMenuSubsystem = reinterpret_cast<LPVOID**>(reinterpret_cast<uintptr_t>(DMS->Vft[86]));
+    //LPVOID** ShouldCreateDeveloperMenuSubsystem = reinterpret_cast<LPVOID**>(reinterpret_cast<uintptr_t>(DMS->Vft[86]));
 
-    MH_CreateHook(reinterpret_cast<LPVOID>(ShouldCreateDeveloperMenuSubsystem), reinterpret_cast<void*>(HkShouldCreateDeveloperMenuSubsystem), reinterpret_cast<PVOID*>(&OShouldCreateDeveloperMenuSubsystem));
-    MH_EnableHook(reinterpret_cast<LPVOID>(ShouldCreateDeveloperMenuSubsystem));
+    //MH_CreateHook(reinterpret_cast<LPVOID>(ShouldCreateDeveloperMenuSubsystem), reinterpret_cast<void*>(HkShouldCreateDeveloperMenuSubsystem), reinterpret_cast<PVOID*>(&OShouldCreateDeveloperMenuSubsystem));
+    //MH_EnableHook(reinterpret_cast<LPVOID>(ShouldCreateDeveloperMenuSubsystem));
 
 
-    LPVOID** InitDeveloperMenuSubsystem = reinterpret_cast<LPVOID**>(reinterpret_cast<uintptr_t>(DMS->Vft[87]));
+    //LPVOID** InitDeveloperMenuSubsystem = reinterpret_cast<LPVOID**>(reinterpret_cast<uintptr_t>(DMS->Vft[87]));
 
 
     // 86 bool (__fastcall *ShouldCreateSubsystem)(USubsystem *this, UObject *);
@@ -316,9 +335,9 @@ void OnAttach() {
 
     //Default__DrawDebugGameplaySubsystem
 
-    UEngineSubsystem* ES = UObject::FindObject<UEngineSubsystem>("EngineSubsystem Engine.Default__EngineSubsystem");
+    //UEngineSubsystem* ES = UObject::FindObject<UEngineSubsystem>("EngineSubsystem Engine.Default__EngineSubsystem");
 
-    LPVOID** InitEngineSubsystem = reinterpret_cast<LPVOID**>(reinterpret_cast<uintptr_t>(ES->Vft[87]));
+    //LPVOID** InitEngineSubsystem = reinterpret_cast<LPVOID**>(reinterpret_cast<uintptr_t>(ES->Vft[87]));
 
     //MH_CreateHook(reinterpret_cast<LPVOID>(InitDeveloperMenuSubsystem), reinterpret_cast<void*>(HkInitDeveloperMenuSubsystem), reinterpret_cast<PVOID*>(&OInitDeveloperMenuSubsystem));
     //MH_EnableHook(reinterpret_cast<LPVOID>(InitDeveloperMenuSubsystem));
